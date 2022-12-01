@@ -9,36 +9,51 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Reproductive and Developmental Systems Genomics" />
 
 
-<title>index.utf8</title>
+<title>Welcome to the Biase lab</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -51,32 +66,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -87,10 +77,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -107,40 +93,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 66px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h2 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h3 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h4 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h5 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h6 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -168,7 +127,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -180,7 +139,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -191,10 +150,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -206,7 +178,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -362,29 +333,35 @@ $(document).ready(function () {
   <img class="myimg" src="logo.png"> </a>
   </div>
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore"><center>
-<div class="mytitle">
-Welcome to the Biase lab
-</div>
-</center></h1>
-<h4 class="author"><center>
-<div class="mysubtitle">
-Reproductive and Developmental Systems Genomics
-</div>
-</center></h4>
+<h1 class="title toc-ignore">Welcome to the Biase lab</h1>
+<h4 class="author">Reproductive and Developmental Systems Genomics</h4>
 
 </div>
 
 
+<style type="text/css">
+h1, h4 {
+  text-align: center;
+}
+</style>
 <style>
 div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 </style>
 <div class="blue">
-<p>Our mission is to understand the molecular mechanisms that drive fertility and the early stages of embryo development and implantation in mammals. To achieve our goals, we are strongly committed to combining experimental, and systems genomics approaches to understand the dynamics of gene regulatory and signaling networks that orchestrate successful events related to fertility or infertility. Our efforts focus on three primary thrusts: 1) Molecular profiling of heifer infertility; 2) The acquisition of developmental competence in oocytes and the molecular signals of embryo survival; 3) Molecular communication between conceptus and endometrium.</p>
+<p>Our mission is to understand the molecular mechanisms that drive
+fertility and the early stages of embryo development and implantation in
+mammals. To achieve our goals, we are strongly committed to combining
+experimental, and systems genomics approaches to understand the dynamics
+of gene regulatory and signaling networks that orchestrate successful
+events related to fertility or infertility. Our efforts focus on three
+primary thrusts: 1) Molecular profiling of heifer infertility; 2) The
+acquisition of developmental competence in oocytes and the molecular
+signals of embryo survival; 3) Molecular communication between conceptus
+and endometrium.</p>
 </div>
 <p><br></p>
 <style>
@@ -392,24 +369,37 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 </style>
 <div class="blue">
 <p><strong>Our research program is partially funded by:</strong></p>
-<p><strong>- The United States Department of Agriculture</strong> <br></p>
+<p><strong>- The United States Department of Agriculture</strong>
+<br></p>
 <ul>
-<li><p><span style="color:blue">NIFA 2018-67015-31936 - Systems Biology Approach To Understanding Conceptus-Uterine Interactions In Cattle</span></p></li>
-<li><p><span style="color:blue">NIFA 2020-67015-31616 - Identification of gene expression profiles in peripheral white blood cells predictive of heifer pregnancy success</span></p></li>
+<li><p><span style="color:blue">NIFA 2018-67015-31936 - Systems Biology
+Approach To Understanding Conceptus-Uterine Interactions In
+Cattle</span></p></li>
+<li><p><span style="color:blue">NIFA 2020-67015-31616 - Identification
+of gene expression profiles in peripheral white blood cells predictive
+of heifer pregnancy success</span></p></li>
 </ul>
 <p><strong>- Virginia Cattle Industry Board</strong> <br></p>
 <ul>
-<li><span style="color:blue">Identifying molecular markers to reduce economic losses due to infertile heifers in beef cattle</span></li>
+<li><span style="color:blue">Identifying molecular markers to reduce
+economic losses due to infertile heifers in beef cattle</span></li>
 </ul>
 </div>
 </div>
 <div id="research" class="section level1">
 <h1>Research</h1>
-<div id="molecular-profiling-of-heifer-infertility" class="section level2">
+<div id="molecular-profiling-of-heifer-infertility"
+class="section level2">
 <h2>Molecular profiling of heifer infertility</h2>
 <div class="row">
 <div class="col-md-6">
-<p>There are several causes infertility. In the Biase Lab, we are tackling the problem in heifers in beef and dairy cattle. Our multidisciplinary program aims at profiling blood born molecules for the comprehensive investigation of genetic and physiological alterations that contribute to infertility. Then, we employ artificial intelligence algorithms for the prediction of fertility heifers early as early as 6 months of age.</p>
+<p>There are several causes infertility. In the Biase Lab, we are
+tackling the problem in heifers in beef and dairy cattle. Our
+multidisciplinary program aims at profiling blood born molecules for the
+comprehensive investigation of genetic and physiological alterations
+that contribute to infertility. Then, we employ artificial intelligence
+algorithms for the prediction of fertility heifers early as early as 6
+months of age.</p>
 </div>
 <div class="col-md-6">
 <p style="text-align:center;">
@@ -418,7 +408,8 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 </div>
 </div>
 </div>
-<div id="the-acquisition-of-developmental-competence-in-oocytes" class="section level2">
+<div id="the-acquisition-of-developmental-competence-in-oocytes"
+class="section level2">
 <h2>The acquisition of developmental competence in oocytes</h2>
 <div class="row">
 <div class="col-md-6">
@@ -427,7 +418,13 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 </p>
 </div>
 <div class="col-md-6">
-<p>The female gamete stores massive amounts of RNAs, proteins and metabolites. The qualitative and quantitative composition of these stores define the ability of this oocyte to be fertilized and sustain the early embryo development. We are interested in understanding the regulatory venues that drive the synthesis of RNA in oocytes. Furthermore, we focus on unveiling how the accumulation of RNAs will contribute to the oocyte developmental competence.</p>
+<p>The female gamete stores massive amounts of RNAs, proteins and
+metabolites. The qualitative and quantitative composition of these
+stores define the ability of this oocyte to be fertilized and sustain
+the early embryo development. We are interested in understanding the
+regulatory venues that drive the synthesis of RNA in oocytes.
+Furthermore, we focus on unveiling how the accumulation of RNAs will
+contribute to the oocyte developmental competence.</p>
 </div>
 </div>
 </div>
@@ -435,7 +432,16 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 <h2>Early stages of mammalian development</h2>
 <div class="row">
 <div class="col-md-6">
-<p>The initial cell cycles of the mammalian organisms are an intriguing, and amazing, phase of the development. The development of a complex multicellular organism from one cell (also called zygote) is far from being understood by developmental biologists. In our lab, we are researching the gene regulatory network wiring that allows the embryo to successfully reach the blastocyst stage. First, we are interested in understanding how the embryo’s genome is activated. Then, we are investigating how the cells (also called blastomeres) differentiate towards two distinct cell types, forming the inner cell mass and the trophectoderm.</p>
+<p>The initial cell cycles of the mammalian organisms are an intriguing,
+and amazing, phase of the development. The development of a complex
+multicellular organism from one cell (also called zygote) is far from
+being understood by developmental biologists. In our lab, we are
+researching the gene regulatory network wiring that allows the embryo to
+successfully reach the blastocyst stage. First, we are interested in
+understanding how the embryo’s genome is activated. Then, we are
+investigating how the cells (also called blastomeres) differentiate
+towards two distinct cell types, forming the inner cell mass and the
+trophectoderm.</p>
 </div>
 <div class="col-md-6">
 <p style="text-align:center;">
@@ -451,7 +457,14 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 <p>pict</p>
 </div>
 <div class="col-md-6">
-<p>After the formation of blastocyst, the embryos hatch from the zona pelucida and the embryonic cells are in immediate contact with the endometrial cells in the uterus. Then, a two-way molecular communication takes place so that the embryo is not rejected by the endometrium and is nourished by the uterus. This communication is essential for the successful implantation and subsequent placentation. We are interested in finding the multitude of pathways the conceptus uses communicates with the endometrium and vice-versa.</p>
+<p>After the formation of blastocyst, the embryos hatch from the zona
+pelucida and the embryonic cells are in immediate contact with the
+endometrial cells in the uterus. Then, a two-way molecular communication
+takes place so that the embryo is not rejected by the endometrium and is
+nourished by the uterus. This communication is essential for the
+successful implantation and subsequent placentation. We are interested
+in finding the multitude of pathways the conceptus uses communicates
+with the endometrium and vice-versa.</p>
 </div>
 </div>
 <p><br> <a href="#top">Back to top</a></p>
@@ -460,74 +473,175 @@ div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
 </div>
 <div id="team" class="section level1">
 <h1>Team</h1>
-<div class="row">
+<div class = "row">
+
 <div class="col-md-3">
-<p><img src="DSC00031.png" alt="Fernando Biase" width="150"/> <br> Fernando Biase <br> <a href="https://drive.google.com/file/d/1E1Xgi0vmKZzCDdsf8h6DzZ-rWtcPqp6g/view?usp=sharing">CV</a></p>
-</div>
-<div class="col-md-3">
-<p><img src="chace_wilson.png" alt="Chace Wilson" width="150"/> <br> Chace Wilson</p>
+<p><img src="DSC00031.png" alt="Fernando Biase" width="150"/> <br>
+Fernando Biase <br> <a
+href="https://drive.google.com/file/d/1E1Xgi0vmKZzCDdsf8h6DzZ-rWtcPqp6g/view?usp=sharing">CV</a></p>
 </div>
 <div class="col-md-3">
 <p><br><br> Mackenzie Marrella</p>
 </div>
-</div>
 <div class="row">
 <div class="col-md-3">
-<p><img src="Jada_Nix.jpg" alt="Chace Wilson" width="170"/> <br> Jada Nix</p>
+<p><img src="Jada_Nix.jpg" alt="Chace Wilson" width="170"/> <br> Jada
+Nix</p>
 </div>
 <div class="col-md-3">
 <p><br><br> Gustavo Schettini</p>
 </div>
 </div>
 <p><br> <br></p>
-<div id="former-lab-members-and-their-next-endeavors" class="section level3">
+<div id="former-lab-members-and-their-next-endeavors"
+class="section level3">
 <h3>Former lab members and their next endeavors</h3>
-<p>Bailey Walker - MS 2020 - Embryologist and Laboratory Technician at Alabama Center for Reproductive Medicine<br> <a href="https://utia.tennessee.edu/person/?id=16565">Sarah E Moorey</a> - PhD 2019 - Assistant Professor at University of Tennessee <br> Katelyn Kimble - MS 2018 - Texas A&amp;M College of Veterinary Medicine &amp; Biomedical Sciences <br></p>
+<p>Bailey Walker - MS 2020 - Embryologist and Laboratory Technician at
+Alabama Center for Reproductive Medicine<br> <a
+href="https://utia.tennessee.edu/person/?id=16565">Sarah E Moorey</a> -
+PhD 2019 - Assistant Professor at University of Tennessee <br> Katelyn
+Kimble - MS 2018 - Texas A&amp;M College of Veterinary Medicine &amp;
+Biomedical Sciences <br></p>
 <p><br> <a href="#top">Back to top</a></p>
 <hr />
 </div>
 </div>
 <div id="publications" class="section level1">
 <h1>Publications</h1>
-<p><strong>For a complete list of publications, please visit <a href="https://www.ncbi.nlm.nih.gov/myncbi/10MMNWmxoMt/bibliography/public/">Pubmed</a> or <a href="https://scholar.google.com/citations?hl=en&amp;user=iG8M1p8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a>. BioRxiv papers can be loaded using <a href="https://www.biorxiv.org/search/author1%3Afernando%2Bbiase%20jcode%3Abiorxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard">bioRxiv</a></strong></p>
+<p><strong>For a complete list of publications, please visit <a
+href="https://www.ncbi.nlm.nih.gov/myncbi/10MMNWmxoMt/bibliography/public/">Pubmed</a>
+or <a
+href="https://scholar.google.com/citations?hl=en&amp;user=iG8M1p8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google
+Scholar</a>. BioRxiv papers can be loaded using <a
+href="https://www.biorxiv.org/search/author1%3Afernando%2Bbiase%20jcode%3Abiorxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard">bioRxiv</a></strong></p>
 2015-current
 <style>
 div.lightgray { background-color:#F5F5F5; border-radius: 5px; padding: 20px;}
 </style>
 <div class="lightgray">
-<p>Biase FH. Isolation of high-quality total RNA and RNA sequencing of single bovine oocytes. STAR Protocols. 2021; 2(4).https://doi.org/10.1016/j.xpro.2021.100895. <a href="https://hivebench-star-protocols.s3.amazonaws.com/protocols/1108.pdf">PDF</a></p>
-<p>Moorey SE, Walker BN, Elmore MF, Elmore JB, Rodning SP, Biase FH. Rewiring of gene expression in circulating white blood cells is associated with pregnancy outcome in heifers (Bos taurus). Sci Rep. 2020 Oct 8;10(1):16786. doi: 10.1038/s41598-020-73694-w. <a href="https://www.nature.com/articles/s41598-020-73694-w.pdf">PDF</a></p>
-<p>Moorey SE, Biase FH. Beef heifer fertility: importance of management practices and technological advancements. J Anim Sci Biotechnol. 2020 Oct 1;11:97. doi: 10.1186/s40104-020-00503-9. <a href="https://jasbsci.biomedcentral.com/track/pdf/10.1186/s40104-020-00503-9">PDF</a></p>
-<p>Walker BN, Biase FH. The blueprint of RNA storages relative to oocyte developmental competence in cattle (Bos taurus). Biol Reprod. 2020 Apr 15;102(4):784-794. doi: 10.1093/biolre/ioaa015. <a href="https://academic.oup.com/biolreprod/article-abstract/102/4/784/5715793?redirectedFrom=fulltext">abstract</a></p>
-<p>Biase FH, Hue I, Dickinson SE, Jaffrezic F, Laloe D, Lewin HA, Sandra O. Fine-tuned adaptation of embryo-endometrium pairs at implantation revealed by transcriptome analyses in Bos taurus. PLoS Biol. 2019 Apr 12;17(4):e3000046. doi: <a href="https://10.1371/journal.pbio.3000046" class="uri">https://10.1371/journal.pbio.3000046</a>. <a href="https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3000046&amp;type=printable">PDF</a></p>
-<p>Dickinson SE, Elmore MF, Kriese-Anderson L, Elmore JB, Walker BN, Dyce PW, Rodning SP, Biase FH. Evaluation of age, weaning weight, body condition score, and reproductive tract score in pre-selected beef heifers relative to reproductive potential. J Anim Sci Biotechnol. 2019 Feb 26;10:18. doi: <a href="https://10.1186/s40104-019-0329-6" class="uri">https://10.1186/s40104-019-0329-6</a>. <a href="https://jasbsci.biomedcentral.com/track/pdf/10.1186/s40104-019-0329-6">PDF</a></p>
-<p>Biase FH, Wu Q, Calandrelli R, Rivas-Astroza M, Zhou S, Chen Z, Zhong S. Rainbow-Seq: Combining Cell Lineage Tracing with Single-Cell RNA Sequencing in Preimplantation Embryos. iScience. 2018 Sep 28;7:16-29. doi: <a href="https://10.1016/j.isci.2018.08.009" class="uri">https://10.1016/j.isci.2018.08.009</a>. <a href="https://www.sciencedirect.com/science/article/pii/S2589004218301214/pdfft?md5=1287f578b8cac85b71718ba7edb80ebc&amp;pid=1-s2.0-S2589004218301214-main.pdf">PDF</a></p>
-<p>Phillips KM, Read CC, Kriese-Anderson LA, Rodning SP, Brandebourg TD, Biase FH, Marks ML, Elmore JB, Stanford MK, Dyce PW. Plasma metabolomic profiles differ at the time of artificial insemination based on pregnancy outcome, in Bos taurus beef heifers. Sci Rep. 2018 Sep 4;8(1):13196. doi: <a href="https://10.1038/s41598-018-31605-0" class="uri">https://10.1038/s41598-018-31605-0</a>. <a href="https://www.nature.com/articles/s41598-018-31605-0.pdf">PDF</a></p>
-<p>Dickinson SE, Biase FH. Transcriptome data of peripheral white blood cells from beef heifers collected at the time of artificial insemination. Data Brief. 2018 Mar 21;18:706-709. doi: <a href="https://10.1016/j.dib.2018.03.062" class="uri">https://10.1016/j.dib.2018.03.062</a>. eCollection 2018 Jun. <a href="https://bmcgenomics.biomedcentral.com/track/pdf/10.1186/s12864-018-4505-4">PDF</a> <a href="">PDF</a></p>
-<p>Biase FH, Kimble KM. Functional signaling and gene regulatory networks between the oocyte and the surrounding cumulus cells. BMC Genomics. 2018 May 10;19(1):351. doi: <a href="https://10.1186/s12864-018-4738-2" class="uri">https://10.1186/s12864-018-4738-2</a>. <a href="https://bmcgenomics.biomedcentral.com/track/pdf/10.1186/s12864-018-4738-2">PDF</a></p>
-<p>Kimble KM, Dickinson SE, Biase FH. Extraction of total RNA from single-oocytes and single-cell mRNA sequencing of swine oocytes. BMC Res Notes. 2018 Feb 27;11(1):155. doi: <a href="https://10.1186/s13104-018-3264-2" class="uri">https://10.1186/s13104-018-3264-2</a>. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5828076/pdf/13104_2018_Article_3264.pdf">PDF</a></p>
-<p>Dickinson SE, Griffin BA, Elmore MF, Kriese-Anderson L, Elmore JB, Dyce PW, Rodning SP, Biase FH. Transcriptome profiles in peripheral white blood cells at the time of artificial insemination discriminate beef heifers with different fertility potential. BMC Genomics. 2018 Feb 9;19(1):129. doi: <a href="https://10.1186/s12864-018-4505-4" class="uri">https://10.1186/s12864-018-4505-4</a>. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5807776/pdf/12864_2018_Article_4505.pdf">PDF</a></p>
-<p>Biase FH. Oocyte Developmental Competence: Insights from Cross-Species Differential Gene Expression and Human Oocyte-Specific Functional Gene Networks. OMICS. 2017 Mar;21(3):156-168. doi: 10.1089/omi.2016.0177. <a href="https://www.liebertpub.com/doi/10.1089/omi.2016.0177">abstract</a></p>
-<p>Carvalho ME, Eler JP, Bonin MN, Rezende FM, Biase FB, Meirelles FV, Regitano LCA, Coutinho LL, Balieiro JCC, Ferraz JBS. Genotypic and allelic frequencies of gene polymorphisms associated with meat tenderness in Nellore beef cattle. Genet Mol Res. 2017 Feb 16;16(1). doi: <a href="https://10.4238/gmr16018957" class="uri">https://10.4238/gmr16018957</a>.</p>
-<p>Biase FH, Rabel C, Guillomot M, Hue I, Andropolis K, Olmstead CA, Oliveira R, Wallace R, Le Bourhis D, Richard C, Campion, E, Chaulot-Talmon A, Giraud-Delville C, Taghouti G, Jammes H, Renard JP, Sandra O, Lewin, HA. Massive dysregulation of genes involved in cell signaling and placental development in cloned cattle conceptus and maternal endometrium. Proc Natl Acad Sci U S A. 2016. <a href="https://10.1073/pnas.1520945114" class="uri">https://10.1073/pnas.1520945114</a>. <a href="https://www.pnas.org/content/pnas/113/51/14492.full.pdf">PDF</a></p>
-<p>Nguyen TC, Cao X, Yu P, Xiao S, Lu J, Biase FH, Sridhar B, Huang N, Zhang K, Zhong S. Mapping RNA-RNA interactome and RNA structure in vivo by MARIO. Nat Commun. 2016 Jun 24;7:12023. <a href="https://www.nature.com/articles/ncomms12023.pdf">PDF</a></p>
-<p>Adona PR, Leal CL, Biase FH, De Bem TH, Mesquita LG, Meirelles FV, Ferraz AL, Furlan LR, Monzani PS, Guemra S. In vitro maturation alters gene expression in bovine oocytes. Zygote. 2016 Aug;24(4):624-33</p>
+<p>Biase FH. Isolation of high-quality total RNA and RNA sequencing of
+single bovine oocytes. STAR Protocols. 2021;
+2(4).https://doi.org/10.1016/j.xpro.2021.100895. <a
+href="https://hivebench-star-protocols.s3.amazonaws.com/protocols/1108.pdf">PDF</a></p>
+<p>Moorey SE, Walker BN, Elmore MF, Elmore JB, Rodning SP, Biase FH.
+Rewiring of gene expression in circulating white blood cells is
+associated with pregnancy outcome in heifers (Bos taurus). Sci Rep. 2020
+Oct 8;10(1):16786. doi: 10.1038/s41598-020-73694-w. <a
+href="https://www.nature.com/articles/s41598-020-73694-w.pdf">PDF</a></p>
+<p>Moorey SE, Biase FH. Beef heifer fertility: importance of management
+practices and technological advancements. J Anim Sci Biotechnol. 2020
+Oct 1;11:97. doi: 10.1186/s40104-020-00503-9. <a
+href="https://jasbsci.biomedcentral.com/track/pdf/10.1186/s40104-020-00503-9">PDF</a></p>
+<p>Walker BN, Biase FH. The blueprint of RNA storages relative to oocyte
+developmental competence in cattle (Bos taurus). Biol Reprod. 2020 Apr
+15;102(4):784-794. doi: 10.1093/biolre/ioaa015. <a
+href="https://academic.oup.com/biolreprod/article-abstract/102/4/784/5715793?redirectedFrom=fulltext">abstract</a></p>
+<p>Biase FH, Hue I, Dickinson SE, Jaffrezic F, Laloe D, Lewin HA, Sandra
+O. Fine-tuned adaptation of embryo-endometrium pairs at implantation
+revealed by transcriptome analyses in Bos taurus. PLoS Biol. 2019 Apr
+12;17(4):e3000046. doi: <a href="https://10.1371/journal.pbio.3000046"
+class="uri">https://10.1371/journal.pbio.3000046</a>. <a
+href="https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3000046&amp;type=printable">PDF</a></p>
+<p>Dickinson SE, Elmore MF, Kriese-Anderson L, Elmore JB, Walker BN,
+Dyce PW, Rodning SP, Biase FH. Evaluation of age, weaning weight, body
+condition score, and reproductive tract score in pre-selected beef
+heifers relative to reproductive potential. J Anim Sci Biotechnol. 2019
+Feb 26;10:18. doi: <a href="https://10.1186/s40104-019-0329-6"
+class="uri">https://10.1186/s40104-019-0329-6</a>. <a
+href="https://jasbsci.biomedcentral.com/track/pdf/10.1186/s40104-019-0329-6">PDF</a></p>
+<p>Biase FH, Wu Q, Calandrelli R, Rivas-Astroza M, Zhou S, Chen Z, Zhong
+S. Rainbow-Seq: Combining Cell Lineage Tracing with Single-Cell RNA
+Sequencing in Preimplantation Embryos. iScience. 2018 Sep 28;7:16-29.
+doi: <a href="https://10.1016/j.isci.2018.08.009"
+class="uri">https://10.1016/j.isci.2018.08.009</a>. <a
+href="https://www.sciencedirect.com/science/article/pii/S2589004218301214/pdfft?md5=1287f578b8cac85b71718ba7edb80ebc&amp;pid=1-s2.0-S2589004218301214-main.pdf">PDF</a></p>
+<p>Phillips KM, Read CC, Kriese-Anderson LA, Rodning SP, Brandebourg TD,
+Biase FH, Marks ML, Elmore JB, Stanford MK, Dyce PW. Plasma metabolomic
+profiles differ at the time of artificial insemination based on
+pregnancy outcome, in Bos taurus beef heifers. Sci Rep. 2018 Sep
+4;8(1):13196. doi: <a href="https://10.1038/s41598-018-31605-0"
+class="uri">https://10.1038/s41598-018-31605-0</a>. <a
+href="https://www.nature.com/articles/s41598-018-31605-0.pdf">PDF</a></p>
+<p>Dickinson SE, Biase FH. Transcriptome data of peripheral white blood
+cells from beef heifers collected at the time of artificial
+insemination. Data Brief. 2018 Mar 21;18:706-709. doi: <a
+href="https://10.1016/j.dib.2018.03.062"
+class="uri">https://10.1016/j.dib.2018.03.062</a>. eCollection 2018
+Jun. <a
+href="https://bmcgenomics.biomedcentral.com/track/pdf/10.1186/s12864-018-4505-4">PDF</a>
+<a href="">PDF</a></p>
+<p>Biase FH, Kimble KM. Functional signaling and gene regulatory
+networks between the oocyte and the surrounding cumulus cells. BMC
+Genomics. 2018 May 10;19(1):351. doi: <a
+href="https://10.1186/s12864-018-4738-2"
+class="uri">https://10.1186/s12864-018-4738-2</a>. <a
+href="https://bmcgenomics.biomedcentral.com/track/pdf/10.1186/s12864-018-4738-2">PDF</a></p>
+<p>Kimble KM, Dickinson SE, Biase FH. Extraction of total RNA from
+single-oocytes and single-cell mRNA sequencing of swine oocytes. BMC Res
+Notes. 2018 Feb 27;11(1):155. doi: <a
+href="https://10.1186/s13104-018-3264-2"
+class="uri">https://10.1186/s13104-018-3264-2</a>. <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5828076/pdf/13104_2018_Article_3264.pdf">PDF</a></p>
+<p>Dickinson SE, Griffin BA, Elmore MF, Kriese-Anderson L, Elmore JB,
+Dyce PW, Rodning SP, Biase FH. Transcriptome profiles in peripheral
+white blood cells at the time of artificial insemination discriminate
+beef heifers with different fertility potential. BMC Genomics. 2018 Feb
+9;19(1):129. doi: <a href="https://10.1186/s12864-018-4505-4"
+class="uri">https://10.1186/s12864-018-4505-4</a>. <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5807776/pdf/12864_2018_Article_4505.pdf">PDF</a></p>
+<p>Biase FH. Oocyte Developmental Competence: Insights from
+Cross-Species Differential Gene Expression and Human Oocyte-Specific
+Functional Gene Networks. OMICS. 2017 Mar;21(3):156-168. doi:
+10.1089/omi.2016.0177. <a
+href="https://www.liebertpub.com/doi/10.1089/omi.2016.0177">abstract</a></p>
+<p>Carvalho ME, Eler JP, Bonin MN, Rezende FM, Biase FB, Meirelles FV,
+Regitano LCA, Coutinho LL, Balieiro JCC, Ferraz JBS. Genotypic and
+allelic frequencies of gene polymorphisms associated with meat
+tenderness in Nellore beef cattle. Genet Mol Res. 2017 Feb 16;16(1).
+doi: <a href="https://10.4238/gmr16018957"
+class="uri">https://10.4238/gmr16018957</a>.</p>
+<p>Biase FH, Rabel C, Guillomot M, Hue I, Andropolis K, Olmstead CA,
+Oliveira R, Wallace R, Le Bourhis D, Richard C, Campion, E,
+Chaulot-Talmon A, Giraud-Delville C, Taghouti G, Jammes H, Renard JP,
+Sandra O, Lewin, HA. Massive dysregulation of genes involved in cell
+signaling and placental development in cloned cattle conceptus and
+maternal endometrium. Proc Natl Acad Sci U S A. 2016. <a
+href="https://10.1073/pnas.1520945114"
+class="uri">https://10.1073/pnas.1520945114</a>. <a
+href="https://www.pnas.org/content/pnas/113/51/14492.full.pdf">PDF</a></p>
+<p>Nguyen TC, Cao X, Yu P, Xiao S, Lu J, Biase FH, Sridhar B, Huang N,
+Zhang K, Zhong S. Mapping RNA-RNA interactome and RNA structure in vivo
+by MARIO. Nat Commun. 2016 Jun 24;7:12023. <a
+href="https://www.nature.com/articles/ncomms12023.pdf">PDF</a></p>
+<p>Adona PR, Leal CL, Biase FH, De Bem TH, Mesquita LG, Meirelles FV,
+Ferraz AL, Furlan LR, Monzani PS, Guemra S. In vitro maturation alters
+gene expression in bovine oocytes. Zygote. 2016 Aug;24(4):624-33</p>
 </div>
 <p><br> <a href="#top">Back to top</a></p>
 <hr />
 </div>
 <div id="joinus" class="section level1">
 <h1>Join us</h1>
-<p>We look forward to having new team members joining our laboratory to work on a multidisciplinary research program that encompasses the disciplines of Reproductive and Developmental Biology, Molecular Genetics, Genomics and Computational Biology. <br></p>
-<p><span style="color: red;"> <strong><em>We welcome enthusiastic graduate students who are concluding their doctoral program and are interested in applying for a NIFA Postdoctoral Fellowship.</em></strong><br> <span style="color: red;"> Application deadline is on Thursday, September 8, 2022 (5:00 p.m. Eastern Time). <br> <span style="color: red;"> See the RFA for details: <a href="https://nifa.usda.gov/sites/default/files/2022-03/FY22-AFRI-EWD-RFA-508.pdf" class="uri">https://nifa.usda.gov/sites/default/files/2022-03/FY22-AFRI-EWD-RFA-508.pdf</a> <br></p>
-<p><strong><em>Enthusiastic and goal-oriented researchers who are interested in strengthening their training and developing skills that will help them progress in their career are encouraged to contact us.</em></strong> <strong>Prospective graduate students may also choose to be part of the <a href="https://mcb.vt.edu/">Molecular and Cellular Biology</a> or <a href="https://gbcb.graduateschool.vt.edu/">Genetics, Bioinformatics, and Computational Biology</a> programs.</strong></p>
-<p>If you are interested in joining our research program, please send an email to <strong><em>fbiase</em></strong> @ <strong><em>vt.edu</em></strong>.</p>
+<p>We look forward to having new team members joining our laboratory to
+work on a multidisciplinary research program that encompasses the
+disciplines of Reproductive and Developmental Biology, Molecular
+Genetics, Genomics and Computational Biology. <br></p>
+<p><strong><em>Enthusiastic and goal-oriented researchers who are
+interested in strengthening their training and developing skills that
+will help them progress in their career are encouraged to contact
+us.</em></strong> <strong>Prospective graduate students may also choose
+to be part of the <a href="https://mcb.vt.edu/">Molecular and Cellular
+Biology</a> or <a href="https://gbcb.graduateschool.vt.edu/">Genetics,
+Bioinformatics, and Computational Biology</a> programs.</strong></p>
+<p>If you are interested in joining our research program, please send an
+email to <strong><em>fbiase</em></strong> @
+<strong><em>vt.edu</em></strong>.</p>
 <p><br></p>
 <div class="row">
 <div class="col-md-6">
 <p>Our lab is located at 175 W Campus Dr, Blacksburg, VA 24061</p>
-<div id="htmlwidget-ee15ba344a0e432e4f97" style="width:576px;height:384px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ee15ba344a0e432e4f97">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[37.221711,-80.423774,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Litton-Reaves Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.221711,37.221711],"lng":[-80.423774,-80.423774]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-83c359c048db1fce6d56" style="width:576px;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-83c359c048db1fce6d56">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[37.221711,-80.423774,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Litton-Reaves Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.221711,37.221711],"lng":[-80.423774,-80.423774]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="col-md-6">
 <p>We have great facilities that allow us to advance our research.</p>
@@ -540,11 +654,25 @@ div.lightgray { background-color:#F5F5F5; border-radius: 5px; padding: 20px;}
 </div>
 <div id="news" class="section level1">
 <h1>In the news</h1>
-<p><a href="https://www.asas.org/taking-stock/blog-post/taking-stock/2021/07/18/contemporary-and-emerging-issues-symposium-i">Contemporary and Emerging Issues Symposium I</a> <br> from ASAS Taking Stock blog post, Published on July 18, 2021 <br></p>
-<p>“Dr. Fernando Biase spoke about “Grand Challenges within Breeding and Genetics”" <br></p>
-<p><a href="https://vtnews.vt.edu/articles/2020/08/predicting-cattle-infertility.html">Predicting cattle infertility through machine-learning</a> <br> by Max Esterhuizen, Published on September 15, 2020 <br></p>
-<p>“Fernando Biase and the other researchers are working to understand the potential gene transcripts that circulate in the animal’s bloodstream that can potentially predict the likelihood of a pregnancy occurring, with the goal of finding out how early these transcripts can be identified in a calf.” <br></p>
-<p><a href="https://ocm.auburn.edu/newsroom/news_articles/2019/07/101355-improving-cattle-fertility.php">Auburn University researcher working to improve fertility in cattle</a> <br> by Paul Hollis, Published on July 10, 2019</p>
+<p><a
+href="https://www.asas.org/taking-stock/blog-post/taking-stock/2021/07/18/contemporary-and-emerging-issues-symposium-i">Contemporary
+and Emerging Issues Symposium I</a> <br> from ASAS Taking Stock blog
+post, Published on July 18, 2021 <br></p>
+<p>“Dr. Fernando Biase spoke about “Grand Challenges within Breeding and
+Genetics”” <br></p>
+<p><a
+href="https://vtnews.vt.edu/articles/2020/08/predicting-cattle-infertility.html">Predicting
+cattle infertility through machine-learning</a> <br> by Max Esterhuizen,
+Published on September 15, 2020 <br></p>
+<p>“Fernando Biase and the other researchers are working to understand
+the potential gene transcripts that circulate in the animal’s
+bloodstream that can potentially predict the likelihood of a pregnancy
+occurring, with the goal of finding out how early these transcripts can
+be identified in a calf.” <br></p>
+<p><a
+href="https://ocm.auburn.edu/newsroom/news_articles/2019/07/101355-improving-cattle-fertility.php">Auburn
+University researcher working to improve fertility in cattle</a> <br> by
+Paul Hollis, Published on July 10, 2019</p>
 <p><br> <a href="#top">Back to top</a></p>
 </div>
 
@@ -558,7 +686,7 @@ div.lightgray { background-color:#F5F5F5; border-radius: 5px; padding: 20px;}
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -576,7 +704,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
