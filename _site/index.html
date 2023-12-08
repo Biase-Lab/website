@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Reproductive and Developmental Systems Genomics" />
+
+
+<title>Welcome to the Biase lab</title>
+
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Biase Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="#research">Research</a>
+</li>
+<li>
+  <a href="#team">Team</a>
+</li>
+<li>
+  <a href="#publications">Publications</a>
+</li>
+<li>
+  <a href="#joinus">Join us</a>
+</li>
+<li>
+  <a href="#news">In the news</a>
+</li>
+<li>
+  <a href="https://sites.google.com/site/biaselaboratory/home">Intranet</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:fbiase@vt.edu">
+    <span class="fa fa-envelope"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://scholar.google.com/citations?hl=en&amp;user=iG8M1p8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">
+    <span class="fa fa-google"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/fernando-biase-80b14288/">
+    <span class="fa fa-linkedin"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/BiaseLab">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+<style>
+  .parallax { 
+    /* The image used */
+      background-image: url("dna-main-300x163.png");
+    
+    /* Set a specific height */
+      height: 500px; 
+    
+    /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.myimg{
+  width: 40%;
+  color: red;
+  position: absolute;
+  top: 300px;
+  left: 30%;
+}
+</style>
+  
+  <!-- Container element -->
+  <div class="parallax">
+  <img class="myimg" src="logo.png"> </a>
+  </div>
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Welcome to the Biase lab</h1>
+<h4 class="author">Reproductive and Developmental Systems Genomics</h4>
+
+</div>
+
+
+<style type="text/css">
+h1, h4 {
+  text-align: center;
+}
+</style>
+<style>
+div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>Our mission is to understand the molecular mechanisms that drive
+fertility and the early stages of embryo development and implantation in
+mammals. To achieve our goals, we are strongly committed to combining
+experimental, and systems genomics approaches to understand the dynamics
+of gene regulatory and signaling networks that orchestrate successful
+events related to fertility or infertility. Our efforts focus on three
+primary thrusts: 1) Molecular profiling of heifer infertility; 2) The
+acquisition of developmental competence in oocytes and the molecular
+signals of embryo survival; 3) Molecular communication between conceptus
+and endometrium.</p>
+</div>
+<p><br></p>
+<style>
+div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><strong>Our research program is partially funded by:</strong></p>
+<p><strong>- The United States Department of Agriculture</strong>
+<br></p>
+<ul>
+<li><span style="color:blue">NIFA 2024-38420-41540 - Bridging Genomes to
+Phenomes: Fostering interdisciplinary expertise to advance animal
+production</span></li>
+<li><span style="color:blue">NIFA 2020-67015-31616 - Identification of
+gene expression profiles in peripheral white blood cells predictive of
+heifer pregnancy success</span></li>
+</ul>
+<p><strong>- Virginia Agriculture council</strong> <br></p>
+<ul>
+<li><span style="color:blue">Selection of High Competence Cattle Embryos
+by Video Analysis</span></li>
+<li><span style="color:blue">Identification of Plasma Proteins That Can
+Be Used to Reduce the Economic Impact of Infertility in Beef
+Heifers</span></li>
+</ul>
+</div>
+</div>
+<div id="research" class="section level1">
+<h1>Research</h1>
+<div id="molecular-profiling-of-heifer-infertility"
+class="section level2">
+<h2>Molecular profiling of heifer infertility</h2>
+<div class="row">
+<div class="col-md-6">
+<p>There are several causes infertility. In the Biase Lab, we are
+tackling the problem in heifers in beef and dairy cattle. Our
+multidisciplinary program aims at profiling blood born molecules for the
+comprehensive investigation of genetic and physiological alterations
+that contribute to infertility. Then, we employ artificial intelligence
+algorithms for the prediction of fertility heifers early as early as 6
+months of age.</p>
+</div>
+<div class="col-md-6">
+<p style="text-align:center;">
+<img src="DSC00121_id_masked.png" alt="biase lab heifer fertility" width=400  />
+</p>
+</div>
+</div>
+</div>
+<div id="the-acquisition-of-developmental-competence-in-oocytes"
+class="section level2">
+<h2>The acquisition of developmental competence in oocytes</h2>
+<div class="row">
+<div class="col-md-6">
+<p style="text-align:center;">
+<img src="02-25-2016-_RGB_0002.png" alt="biase lab oocyte" width=400  />
+</p>
+</div>
+<div class="col-md-6">
+<p>The female gamete stores massive amounts of RNAs, proteins and
+metabolites. The qualitative and quantitative composition of these
+stores define the ability of this oocyte to be fertilized and sustain
+the early embryo development. We are interested in understanding the
+regulatory venues that drive the synthesis of RNA in oocytes.
+Furthermore, we focus on unveiling how the accumulation of RNAs will
+contribute to the oocyte developmental competence.</p>
+</div>
+</div>
+</div>
+<div id="early-stages-of-mammalian-development" class="section level2">
+<h2>Early stages of mammalian development</h2>
+<div class="row">
+<div class="col-md-6">
+<p>The initial cell cycles of the mammalian organisms are an intriguing,
+and amazing, phase of the development. The development of a complex
+multicellular organism from one cell (also called zygote) is far from
+being understood by developmental biologists. In our lab, we are
+researching the gene regulatory network wiring that allows the embryo to
+successfully reach the blastocyst stage. First, we are interested in
+understanding how the embryo’s genome is activated. Then, we are
+investigating how the cells (also called blastomeres) differentiate
+towards two distinct cell types, forming the inner cell mass and the
+trophectoderm.</p>
+</div>
+<div class="col-md-6">
+<p style="text-align:center;">
+<img src="15000157.png" alt="biase lab blastocysts" width=400  />
+</p>
+</div>
+</div>
+</div>
+<div id="conceptus-maternal-communication" class="section level2">
+<h2>Conceptus-maternal communication</h2>
+<div class="row">
+<div class="col-md-6">
+<p>pict</p>
+</div>
+<div class="col-md-6">
+<p>After the formation of blastocyst, the embryos hatch from the zona
+pelucida and the embryonic cells are in immediate contact with the
+endometrial cells in the uterus. Then, a two-way molecular communication
+takes place so that the embryo is not rejected by the endometrium and is
+nourished by the uterus. This communication is essential for the
+successful implantation and subsequent placentation. We are interested
+in finding the multitude of pathways the conceptus uses communicates
+with the endometrium and vice-versa.</p>
+</div>
+</div>
+<p><br> <a href="#top">Back to top</a></p>
+<hr />
+</div>
+</div>
+<div id="team" class="section level1">
+<h1>Team</h1>
+<div class="row">
+<div class="col-md-3">
+<p><img src="DSC00031.png" alt="Fernando Biase" width="150"/> <br>
+Fernando Biase <br> <a
+href="https://drive.google.com/file/d/1E1Xgi0vmKZzCDdsf8h6DzZ-rWtcPqp6g/view?usp=sharing">CV</a></p>
+</div>
+<div class="col-md-3">
+<p><br> <br> <br> <br> Mackenzie Marrella</p>
+</div>
+<div class="col-md-3">
+<p><br> <br> <br> <br> Gustavo Schettini</p>
+</div>
+<div class="col-md-3">
+<p><br><br></p>
+</div>
+</div>
+<p><br> <br></p>
+<div id="former-lab-members-and-their-next-endeavors"
+class="section level3">
+<h3>Former lab members and their next endeavors</h3>
+<p>Jada Nix - MS 2023 - Doctoral program at Universty of Missouri<br>
+Bailey Walker - MS 2020 - Embryologist and Laboratory Technician at
+Alabama Center for Reproductive Medicine<br> <a
+href="https://utia.tennessee.edu/person/?id=16565">Sarah E Moorey</a> -
+PhD 2019 - Assistant Professor at University of Tennessee <br> Katelyn
+Kimble - MS 2018 - Texas A&amp;M College of Veterinary Medicine &amp;
+Biomedical Sciences <br></p>
+<p><br> <a href="#top">Back to top</a></p>
+<hr />
+</div>
+</div>
+<div id="publications" class="section level1">
+<h1>Publications</h1>
+<p><strong>For a complete list of publications, please visit <a
+href="https://www.ncbi.nlm.nih.gov/myncbi/10MMNWmxoMt/bibliography/public/">Pubmed</a>
+or <a
+href="https://scholar.google.com/citations?hl=en&amp;user=iG8M1p8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google
+Scholar</a>. BioRxiv papers can be loaded using <a
+href="https://www.biorxiv.org/search/author1%3Afernando%2Bbiase%20jcode%3Abiorxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard">bioRxiv</a></strong></p>
+2020-current
+<style>
+div.lightgray { background-color:#F5F5F5; border-radius: 5px; padding: 20px;}
+</style>
+<div class="lightgray">
+<p>Nix JL, Schettini GP, Speckhart SL, Ealy AD, Biase FH. Ablation of
+<i>OCT4</i> function in cattle embryos by double electroporation of
+CRISPR-Cas for DNA and RNA targeting (CRISPR-DART). PNAS Nexus. 2023 Oct
+20;2(11):pgad343. doi: 10.1093/pnasnexus/pgad343. <a
+href="https://academic.oup.com/pnasnexus/article/2/11/pgad343/7325962">Paper</a></p>
+<p>Biase FH, Moorey SE, Schnuelle JG, Rodning S, Ortega MS, Spencer TE.
+Extensive rewiring of the gene regulatory interactions between in
+vitro-produced conceptuses and endometrium during attachment. PNAS
+Nexus. 2023 Sep 2;2(9):pgad284. doi: 10.1093/pnasnexus/pgad284.<a
+href="https://academic.oup.com/pnasnexus/article/2/9/pgad284/7258995?searchresult=1">Paper</a></p>
+<p>Marrella MA, Biase FH. A multi-omics analysis identifies molecular
+features associated with fertility in heifers (Bos taurus). Sci
+Rep. 2023 Aug 4;13(1):12664. doi: 10.1038/s41598-023-39858-0. <a
+href="https://www.nature.com/articles/s41598-023-39858-0#:~:text=Our%20multi%2Domics%20analyses%20confirm,of%20breed%2Dspecific%20genetic%20background.">Paper</a></p>
+<p>Marrella MA, Biase FH. Robust identification of regulatory variants
+(eQTLs) using a differential expression framework developed for
+RNA-sequencing. J Anim Sci Biotechnol. 2023 May 5;14(1):62. doi:
+10.1186/s40104-023-00861-0. <a
+href="https://jasbsci.biomedcentral.com/articles/10.1186/s40104-023-00861-0">Paper</a></p>
+<p>Nix JL, Schettini GP, Biase FH. Sexing of cattle embryos using
+RNA-sequencing data or polymerase chain reaction based on a complete
+sequence of cattle chromosome Y. Front Genet. 2023 Apr 3;14:1038291.
+doi: 10.3389/fgene.2023.1038291. <a
+href="https://www.frontiersin.org/articles/10.3389/fgene.2023.1038291/full">Paper</a></p>
+<p>Nix J, Marrella MA, Oliver MA, Rhoads M, Ealy AD, Biase FH. Cleavage
+kinetics is a better indicator of embryonic developmental competency
+than brilliant cresyl blue staining of oocytes. Anim Reprod Sci. 2023
+Jan;248:107174. <a href="doi:10.1016/j.anireprosci.2022.107174"
+class="uri">doi:10.1016/j.anireprosci.2022.107174</a>. <a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0378432022002536?via%3Dihub">Paper</a></p>
+<p>Wilson C, Dias NW, Pancini S, Mercadante V, Biase FH. Delayed
+processing of blood samples impairs the accuracy of mRNA-based
+biomarkers. Sci Rep. 2022 May 17;12(1):8196. doi:
+10.1038/s41598-022-12178-5. <a
+href="https://www.nature.com/articles/s41598-022-12178-5">Paper</a></p>
+<p>Biase FH. Isolation of high-quality total RNA and RNA sequencing of
+single bovine oocytes. STAR Protocols. 2021;
+2(4).https://doi.org/10.1016/j.xpro.2021.100895. <a
+href="https://hivebench-star-protocols.s3.amazonaws.com/protocols/1108.pdf">PDF</a></p>
+<p>Moorey SE, Walker BN, Elmore MF, Elmore JB, Rodning SP, Biase FH.
+Rewiring of gene expression in circulating white blood cells is
+associated with pregnancy outcome in heifers (Bos taurus). Sci Rep. 2020
+Oct 8;10(1):16786. doi: 10.1038/s41598-020-73694-w. <a
+href="https://www.nature.com/articles/s41598-020-73694-w.pdf">PDF</a></p>
+<p>Moorey SE, Biase FH. Beef heifer fertility: importance of management
+practices and technological advancements. J Anim Sci Biotechnol. 2020
+Oct 1;11:97. doi: 10.1186/s40104-020-00503-9. <a
+href="https://jasbsci.biomedcentral.com/track/pdf/10.1186/s40104-020-00503-9">PDF</a></p>
+<p>Walker BN, Biase FH. The blueprint of RNA storages relative to oocyte
+developmental competence in cattle (Bos taurus). Biol Reprod. 2020 Apr
+15;102(4):784-794. doi: 10.1093/biolre/ioaa015. <a
+href="https://academic.oup.com/biolreprod/article-abstract/102/4/784/5715793?redirectedFrom=fulltext">abstract</a></p>
+</div>
+<p><br> <a href="#top">Back to top</a></p>
+<hr />
+</div>
+<div id="joinus" class="section level1">
+<h1>Join us</h1>
+<p>We look forward to having new team members joining our laboratory to
+work on a multidisciplinary research program that encompasses the
+disciplines of Reproductive and Developmental Biology, Molecular
+Genetics, Genomics and Computational Biology. <br></p>
+<p><strong><em>Enthusiastic and goal-oriented researchers who are
+interested in strengthening their training and developing skills that
+will help them progress in their career are encouraged to contact
+us.</em></strong> <strong>Prospective graduate students may also choose
+to be part of the <a href="https://mcb.vt.edu/">Molecular and Cellular
+Biology</a> or <a href="https://gbcb.graduateschool.vt.edu/">Genetics,
+Bioinformatics, and Computational Biology</a> programs.</strong></p>
+<p>If you are interested in joining our research program, please send an
+email to <strong><em>fbiase</em></strong> @
+<strong><em>vt.edu</em></strong>.</p>
+<p><br></p>
+<div class="row">
+<div class="col-md-6">
+<p>Our lab is located at 175 W Campus Dr, Blacksburg, VA 24061</p>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ef672d109052fee80b33" style="width:576px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-ef672d109052fee80b33">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[37.221711,-80.42377399999999,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Litton-Reaves Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.221711,37.221711],"lng":[-80.42377399999999,-80.42377399999999]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="col-md-6">
+<p>We have great facilities that allow us to advance our research.</p>
+<iframe src="https://docs.google.com/presentation/d/1EkOP0e1CKDgsTE98-Z1e_a0X_VfZ74kb3kFozv5Kdfo/embed?start=true&amp;loop=true&amp;delayms=3000" frameborder="0" width="560" height="379" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+</iframe>
+</div>
+</div>
+<p><br> <a href="#top">Back to top</a></p>
+<hr />
+</div>
+<div id="news" class="section level1">
+<h1>In the news</h1>
+<p><a
+href="https://www.asas.org/taking-stock/blog-post/taking-stock/2021/07/18/contemporary-and-emerging-issues-symposium-i">Contemporary
+and Emerging Issues Symposium I</a> <br> from ASAS Taking Stock blog
+post, Published on July 18, 2021 <br></p>
+<p>“Dr. Fernando Biase spoke about “Grand Challenges within Breeding and
+Genetics”” <br></p>
+<p><a
+href="https://vtnews.vt.edu/articles/2020/08/predicting-cattle-infertility.html">Predicting
+cattle infertility through machine-learning</a> <br> by Max Esterhuizen,
+Published on September 15, 2020 <br></p>
+<p>“Fernando Biase and the other researchers are working to understand
+the potential gene transcripts that circulate in the animal’s
+bloodstream that can potentially predict the likelihood of a pregnancy
+occurring, with the goal of finding out how early these transcripts can
+be identified in a calf.” <br></p>
+<p><a
+href="https://ocm.auburn.edu/newsroom/news_articles/2019/07/101355-improving-cattle-fertility.php">Auburn
+University researcher working to improve fertility in cattle</a> <br> by
+Paul Hollis, Published on July 10, 2019</p>
+<p><br> <a href="#top">Back to top</a></p>
+</div>
+
+<p>Copyright &copy; 2022 Fernando Biase All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
