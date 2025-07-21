@@ -654,6 +654,32 @@ email to <strong><em>fbiase</em></strong> @
 <div class="row">
 <div class="col-md-6">
 <p>Our lab is located at 175 W Campus Dr, Blacksburg, VA 24061</p>
+<div id="lab-map"
+style="height: 300px; width: 100%; border-radius: 8px; border: 1px solid #e2e8f0; margin: 20px 0;">
+
+</div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait a bit to ensure DOM is ready
+  setTimeout(function() {
+    if (typeof L !== 'undefined' && document.getElementById('lab-map')) {
+      const map = L.map('lab-map').setView([37.221711, -80.423774], 16);
+      
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+      }).addTo(map);
+      
+      L.marker([37.221711, -80.423774])
+        .addTo(map)
+        .bindPopup('<b>Litton-Reaves Hall</b><br>Biase Laboratory<br>Virginia Tech')
+        .openPopup();
+    }
+  }, 1000);
+});
+</script>
 </div>
 <div class="col-md-6">
 <p>We have great facilities that allow us to advance our research.</p>
