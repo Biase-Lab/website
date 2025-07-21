@@ -1,61 +1,305 @@
+:root {
+  /* Modern color palette for Biase Lab */
+  --primary-blue: #1e3a8a;        /* Deep blue for headings and primary elements */
+  --secondary-blue: #3b82f6;      /* Bright blue for accents */
+  --light-blue: #eff6ff;          /* Very light blue for backgrounds */
+  --accent-teal: #0d9488;         /* Teal for links and highlights */
+  --light-teal: #f0fdfa;          /* Light teal background */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-600: #475569;
+  --gray-800: #1e293b;
+  --success-green: #059669;
+  --warm-gray: #fafaf9;
+}
+
+/* Modern body styling */
+body {
+  color: var(--gray-800);
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--light-blue) 25%, var(--gray-50) 50%, var(--warm-gray) 75%, var(--gray-50) 100%);
+  background-size: 400% 400%;
+  animation: subtleGradient 20s ease infinite;
+}
+
 /* This change the style of the main container that wraps the whole R Markdown document. It allows the parallax image to be full width */
-  .main-container {
-    max-width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.main-container {
+  max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+}
 
 /* Then we place our content with this style because we don't want it to be full width */
-.mycontent{
-      max-width: 900px !important;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: 'Montserrat';
-      font-size: 130%;
-      line-height: 1.7;
-      padding-right: 30px;
-      padding-left: 30px;
+.mycontent {
+  max-width: 900px !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: var(--gray-800);
 }
 
-
-
-
-/* Just for fun, a bit of customization for title and text.. */
-.mytitle{
+/* Modern title styling */
+.mytitle {
   text-transform: uppercase;
-  font-family: 'Montserrat';
-  font-size: 80%;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--primary-blue);
 }
 
-.mysubtitle{
+.mysubtitle {
   text-transform: uppercase;
-  color:blue;
-  font-family: 'Montserrat';
-  font-size: 100%;
-  font-weight: 300;
-  letter-spacing: 4px;
+  color: var(--secondary-blue);
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 50px;
+/* Enhanced heading styles */
+h1, .h1 {
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-top: 50px;
+  padding-top: 30px !important;
+  margin-top: 10px !important;
+  border-bottom: 3px solid var(--secondary-blue);
+  padding-bottom: 10px;
 }
 
-h1 {
-    padding-top: 30px !important;
-    margin-top: 10px !important;
+h2, .h2 {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
+h3, .h3 {
+  color: var(--accent-teal);
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h4, .h4 {
+  color: var(--gray-600);
+  font-weight: 500;
+  margin-top: 25px;
+}
+
+/* Style for the author field (subtitle) */
+.author {
+  font-size: 30px !important;
+  color: var(--secondary-blue) !important;
+  font-weight: 600 !important;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Modern code blocks */
 pre {
-    border: 0px solid #cccccc;
-    border-radius: 0px;
- }
-
-a {
-  color: #69b3a2;
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
 }
 
+code {
+  background-color: var(--gray-100);
+  color: var(--gray-800);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Enhanced link styles */
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-blue);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+}
+
+/* Modern button styles */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+/* Smooth scrolling with enhanced animation */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to main sections */
+.research-section,
+.team-section,
+.publications-section,
+.join-section,
+.news-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Smooth transitions for interactive elements */
+.content-box,
+.funding-box,
+.publications-box,
+.team-member {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Modern content boxes */
+.content-box {
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--warm-gray) 100%);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.funding-box {
+  background: linear-gradient(135deg, var(--light-teal) 0%, var(--gray-50) 100%);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.publications-box {
+  background-color: var(--warm-gray);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Team member cards */
+.team-member {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-2px);
+}
+
+.team-member img {
+  border-radius: 50%;
+  border: 3px solid var(--gray-200);
+  transition: border-color 0.3s ease;
+}
+
+.team-member:hover img {
+  border-color: var(--secondary-blue);
+}
+
+/* Enhanced navbar */
+.navbar {
+  background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: bold !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link, .navbar-nav a {
+  color: yellow !important;
+  font-weight: bold !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav a:hover {
+  color: var(--light-blue) !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .mycontent {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  
+  .content-box, .funding-box, .publications-box {
+    padding: 16px;
+    margin: 15px 0;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* Subtle background animation */
+@keyframes subtleGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

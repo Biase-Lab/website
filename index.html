@@ -14,7 +14,7 @@
 
 <title>Welcome to the Biase lab</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -33,6 +33,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
@@ -40,9 +41,9 @@
 <script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -349,10 +350,7 @@ h1, h4 {
   text-align: center;
 }
 </style>
-<style>
-div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
-</style>
-<div class="blue">
+<div class="content-box">
 <p>Our mission is to understand the molecular mechanisms that drive
 fertility and the early stages of embryo development and implantation in
 mammals. To achieve our goals, we are strongly committed to combining
@@ -361,53 +359,48 @@ of gene regulatory and signaling networks that orchestrate successful
 events related to fertility or infertility. Our efforts focus on three
 primary thrusts: 1) Molecular profiling of heifer infertility; 2) The
 acquisition of developmental competence in oocytes and the molecular
-signals of embryo survival; 3) Molecular communication between conceptus
-and endometrium.</p>
+signals of embryo survival; 3) Molecular signaling between conceptus and
+endometrium.</p>
 </div>
 <p><br></p>
-<style>
-div.blue { background-color:#ebebff; border-radius: 5px; padding: 20px;}
-</style>
-<div class="blue">
+<div class="funding-box">
 <p><strong>Our research program is partially funded by:</strong></p>
 <p><strong>- The United States Department of Agriculture</strong>
 <br></p>
 <ul>
-<li><span style="color:blue">NIFA 2024-38420-41540 - Bridging Genomes to
-Phenomes: Fostering interdisciplinary expertise to advance animal
-production</span></li>
-<li><span style="color:blue">NIFA 2020-67015-31616 - Identification of
-gene expression profiles in peripheral white blood cells predictive of
-heifer pregnancy success</span></li>
+<li><span style="color:var(--primary-blue); font-weight: 500;">NIFA
+2024-38420-41540 - Bridging Genomes to Phenomes: Fostering
+interdisciplinary expertise to advance animal production</span></li>
+<li><span style="color:var(--primary-blue); font-weight: 500;">NIFA
+2020-67015-31616 - Identification of gene expression profiles in
+peripheral white blood cells predictive of heifer pregnancy
+success</span></li>
 </ul>
-<p><strong>- Virginia Agriculture council</strong> <br></p>
+<p><strong>- Virginia Cattle Industry Board</strong> <br></p>
 <ul>
-<li><span style="color:blue">Selection of High Competence Cattle Embryos
-by Video Analysis</span></li>
-<li><span style="color:blue">Identification of Plasma Proteins That Can
-Be Used to Reduce the Economic Impact of Infertility in Beef
-Heifers</span></li>
+<li><span style="color:var(--primary-blue); font-weight: 500;">Genetic
+Variants That Cause Embryonic Death</span></li>
 </ul>
 </div>
-</div>
-<div id="research" class="section level1">
-<h1>Research</h1>
+<div id="research" class="section level1 research-section">
+<h1 class="research-section">Research</h1>
+<div role="main" aria-label="Research Areas">
 <div id="molecular-profiling-of-heifer-infertility"
 class="section level2">
 <h2>Molecular profiling of heifer infertility</h2>
 <div class="row">
 <div class="col-md-6">
-<p>There are several causes infertility. In the Biase Lab, we are
+<p>There are several causes of infertility. In the Biase Lab, we are
 tackling the problem in heifers in beef and dairy cattle. Our
 multidisciplinary program aims at profiling blood born molecules for the
 comprehensive investigation of genetic and physiological alterations
 that contribute to infertility. Then, we employ artificial intelligence
-algorithms for the prediction of fertility heifers early as early as 6
+algorithms for the prediction of fertility in heifers as early as 6
 months of age.</p>
 </div>
 <div class="col-md-6">
 <p style="text-align:center;">
-<img src="DSC00121_id_masked.png" alt="biase lab heifer fertility" width=400  />
+<img src="DSC00121_id_masked.png" alt="Cattle heifers in field - Biase Lab fertility research" width="400" height="auto" loading="lazy" decoding="async" />
 </p>
 </div>
 </div>
@@ -418,7 +411,7 @@ class="section level2">
 <div class="row">
 <div class="col-md-6">
 <p style="text-align:center;">
-<img src="02-25-2016-_RGB_0002.png" alt="biase lab oocyte" width=400  />
+<img src="02-25-2016-_RGB_0002.png" alt="Bovine oocyte developmental competence research - microscopy image" width="400" height="auto" loading="lazy" decoding="async" />
 </p>
 </div>
 <div class="col-md-6">
@@ -442,14 +435,13 @@ multicellular organism from one cell (also called zygote) is far from
 being understood by developmental biologists. In our lab, we are
 researching the gene regulatory network wiring that allows the embryo to
 successfully reach the blastocyst stage. First, we are interested in
-understanding how the embryo’s genome is activated. Then, we are
-investigating how the cells (also called blastomeres) differentiate
-towards two distinct cell types, forming the inner cell mass and the
-trophectoderm.</p>
+understanding how the embryo’s genome is activated. We are also
+investigating the genetics and molecular features that lead to early
+embryonic developmental arrest.</p>
 </div>
 <div class="col-md-6">
 <p style="text-align:center;">
-<img src="15000157.png" alt="biase lab blastocysts" width=400  />
+<img src="2024_3_27_frozen_all_media_4xb.png" alt="Mammalian blastocyst embryo development - early stage research" width="400" height="auto" loading="lazy" decoding="async" />
 </p>
 </div>
 </div>
@@ -467,49 +459,102 @@ endometrial cells in the uterus. Then, a two-way molecular communication
 takes place so that the embryo is not rejected by the endometrium and is
 nourished by the uterus. This communication is essential for the
 successful implantation and subsequent placentation. We are interested
-in finding the multitude of pathways the conceptus uses communicates
+in finding the multitude of pathways the conceptus uses to communicate
 with the endometrium and vice-versa.</p>
 </div>
 </div>
-<p><br> <a href="#top">Back to top</a></p>
+<p><br></p>
+</div>
+</div>
+<p><a href="#top" aria-label="Return to top of page">Back to top</a></p>
 <hr />
 </div>
 </div>
-<div id="team" class="section level1">
-<h1>Team</h1>
-<div class="row">
-<div class="col-md-3">
-<p><img src="DSC00031.png" alt="Fernando Biase" width="150"/> <br>
-Fernando Biase <br> <a
-href="https://drive.google.com/file/d/1E1Xgi0vmKZzCDdsf8h6DzZ-rWtcPqp6g/view?usp=sharing">CV</a></p>
+<div id="team" class="section level1 team-section">
+<h1 class="team-section">Team</h1>
+<div role="main" aria-label="Laboratory Team Members">
+<div id="current-team-members" class="section level2">
+<h2>Current Team Members</h2>
+<div class="row" style="margin-bottom: 40px;">
+<div class="col-md-4 team-member" role="article"
+aria-labelledby="fernando-name">
+<img src="DSC00031.png" alt="Fernando Biase - Principal Investigator, Biase Laboratory" width="180" height="180" style="border-radius: 50%; border: 4px solid var(--gray-200); margin-bottom: 15px;" loading="lazy" decoding="async"/>
+<h4 id="fernando-name" style="color: var(--primary-blue); margin-bottom: 5px;">
+Fernando Biase
+</h4>
+<p style="color: var(--accent-teal); font-weight: 500; margin-bottom: 10px;">
+Principal Investigator
+</p>
+<p style="font-size: 14px; color: var(--gray-600);">
+PhD in Genetics<br> Reproductive and Developmental Systems Genomics
+</p>
 </div>
-<div class="col-md-3">
-<p><br> <br> <br> <br> Mackenzie Marrella</p>
+<div class="col-md-4 team-member" role="article"
+aria-labelledby="michael-name">
+<img src="1631151045947.jpeg" alt="Michael Morozyuk - Graduate Student, Biase Laboratory" width="180" height="180" style="border-radius: 50%; border: 4px solid var(--gray-200); margin-bottom: 15px;" loading="lazy" decoding="async"/>
+<h4 id="michael-name" style="color: var(--primary-blue); margin-bottom: 5px;">
+Michael Morozyuk
+</h4>
+<p style="color: var(--accent-teal); font-weight: 500; margin-bottom: 10px;">
+Graduate Student
+</p>
+<p style="font-size: 14px; color: var(--gray-600);">
+PhD Student<br> Genetics, Bioinformatics, and Computational Biology
+</p>
 </div>
-<div class="col-md-3">
-<p><br> <br> <br> <br> Gustavo Schettini</p>
+<div class="col-md-4 team-member" role="article"
+aria-labelledby="camila-name">
+<div
+style="width: 180px; height: 180px; background: linear-gradient(135deg, var(--light-blue), var(--gray-100)); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: var(--gray-500); border: 4px solid var(--gray-200);"
+role="img" aria-label="Profile placeholder for Camila Epheza">
+<p><i class="fa fa-user" style="font-size: 70px;" aria-hidden="true"></i></p>
 </div>
-<div class="col-md-3">
-<p><br><br></p>
+<h4 id="camila-name" style="color: var(--primary-blue); margin-bottom: 5px;">
+Camila Epheza
+</h4>
+<p style="color: var(--accent-teal); font-weight: 500; margin-bottom: 10px;">
+Graduate Student
+</p>
+<p style="font-size: 14px; color: var(--gray-600);">
+PhD Student<br> Animal Sciences
+</p>
 </div>
 </div>
 <p><br> <br></p>
-<div id="former-lab-members-and-their-next-endeavors"
-class="section level3">
-<h3>Former lab members and their next endeavors</h3>
-<p>Jada Nix - MS 2023 - Doctoral program at Universty of Missouri<br>
-Bailey Walker - MS 2020 - Embryologist and Laboratory Technician at
-Alabama Center for Reproductive Medicine<br> <a
-href="https://utia.tennessee.edu/person/?id=16565">Sarah E Moorey</a> -
-PhD 2019 - Assistant Professor at University of Tennessee <br> Katelyn
-Kimble - MS 2018 - Texas A&amp;M College of Veterinary Medicine &amp;
-Biomedical Sciences <br></p>
-<p><br> <a href="#top">Back to top</a></p>
+</div>
+<div id="former-lab-members" class="section level2">
+<h2>Former Lab Members</h2>
+<div class="content-box"
+style="background: linear-gradient(135deg, var(--warm-gray) 0%, var(--light-blue) 100%);">
+<p><strong>Recent Graduates and Their Career Paths:</strong></p>
+<div style="margin-top: 20px;">
+<p><strong>2025</strong> - <strong>Gustavo Schettiini</strong> - PhD →
+Postdoctoral Researcher at Virginia Commonwealth University</p>
+<p><strong>2024</strong> - <strong>Makenzie Marrella</strong> - PhD →
+Data Analyst at East Penn Manufacturing</p>
+<p><strong>2023</strong> - <strong>Jada Nix</strong> - MS → Doctoral
+program at University of Missouri</p>
+<p><strong>2020</strong> - <strong>Bailey Walker</strong> - MS →
+Embryologist and Laboratory Technician at Alabama Center for
+Reproductive Medicine</p>
+<p><strong>2019</strong> - <strong><a
+href="https://utia.tennessee.edu/person/?id=16565">Sarah E
+Moorey</a></strong> - PhD → Assistant Professor at University of
+Tennessee</p>
+<p><strong>2018</strong> - <strong>Katelyn Kimble</strong> - MS → Texas
+A&amp;M College of Veterinary Medicine &amp; Biomedical Sciences</p>
+</div>
+</div>
+<p><br></p>
+</div>
+</div>
+<p><a href="#top" aria-label="Return to top of page">Back to top</a></p>
 <hr />
 </div>
 </div>
-<div id="publications" class="section level1">
-<h1>Publications</h1>
+<div id="publications" class="section level1 publications-section">
+<h1 class="publications-section">Publications</h1>
+<div role="main" aria-label="Research Publications">
 <p><strong>For a complete list of publications, please visit <a
 href="https://www.ncbi.nlm.nih.gov/myncbi/10MMNWmxoMt/bibliography/public/">Pubmed</a>
 or <a
@@ -517,10 +562,27 @@ href="https://scholar.google.com/citations?hl=en&amp;user=iG8M1p8AAAAJ&amp;view_
 Scholar</a>. BioRxiv papers can be loaded using <a
 href="https://www.biorxiv.org/search/author1%3Afernando%2Bbiase%20jcode%3Abiorxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard">bioRxiv</a></strong></p>
 2020-current
-<style>
-div.lightgray { background-color:#F5F5F5; border-radius: 5px; padding: 20px;}
-</style>
-<div class="lightgray">
+<div class="publications-box">
+<p>Biase FH, Moorey SE, Schnuelle JG, Rodning S, Ortega MS, Spencer TE.
+Altered microRNA composition in the uterine lumen fluid in cattle (Bos
+taurus) pregnancies initiated by artificial insemination or transfer of
+an in vitro produced embryo. J Anim Sci Biotechnol. 2024 Sep
+13;15(1):130. doi: 10.1186/s40104-024-01083-8. <a
+href="https://jasbsci.biomedcentral.com/articles/10.1186/s40104-024-01083-8">Paper</a></p>
+<p>Schettini GP, Morozyuk M, Biase FH. Identification of novel cattle
+(Bos taurus) genes and biological insights of their function in
+pre-implantation embryo development. BMC Genomics. 2024 Aug 9;25(1):775.
+doi: 10.1186/s12864-024-10685-5. <a
+href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10685-5">Paper</a></p>
+<p>Biase FH, Schettini G. Protocol for the electroporation of CRISPR-Cas
+for DNA and RNA targeting in Bos taurus zygotes. STAR Protoc. 2024 Mar
+15;5(1):102940. doi: 10.1016/j.xpro.2024.102940. <a
+href="https://www.sciencedirect.com/science/article/pii/S2666166724001059?via%3Dihub">Paper</a></p>
+<p>Marrella M, Moorey SED, Campagna SR, Sarumi Q, Biase FH. Higher
+abundance of 2-dehydro-d-gluconate in the plasma of sub-fertile or
+infertile Bos taurus heifers. J Anim Sci. 2024 Jan 3;102:skae126. doi:
+10.1093/jas/skae126. <a
+href="https://academic.oup.com/jas/article/doi/10.1093/jas/skae126/7667480?login=true">Paper</a></p>
 <p>Nix JL, Schettini GP, Speckhart SL, Ealy AD, Biase FH. Ablation of
 <i>OCT4</i> function in cattle embryos by double electroporation of
 CRISPR-Cas for DNA and RNA targeting (CRISPR-DART). PNAS Nexus. 2023 Oct
@@ -574,11 +636,15 @@ developmental competence in cattle (Bos taurus). Biol Reprod. 2020 Apr
 15;102(4):784-794. doi: 10.1093/biolre/ioaa015. <a
 href="https://academic.oup.com/biolreprod/article-abstract/102/4/784/5715793?redirectedFrom=fulltext">abstract</a></p>
 </div>
-<p><br> <a href="#top">Back to top</a></p>
+<p><br></p>
+</div>
+<p><a href="#top" aria-label="Return to top of page">Back to top</a></p>
 <hr />
 </div>
-<div id="joinus" class="section level1">
-<h1>Join us</h1>
+</div>
+<div id="joinus" class="section level1 join-section">
+<h1 class="join-section">Join us</h1>
+<div role="main" aria-label="Join Our Laboratory">
 <p>We look forward to having new team members joining our laboratory to
 work on a multidisciplinary research program that encompasses the
 disciplines of Reproductive and Developmental Biology, Molecular
@@ -597,8 +663,8 @@ email to <strong><em>fbiase</em></strong> @
 <div class="row">
 <div class="col-md-6">
 <p>Our lab is located at 175 W Campus Dr, Blacksburg, VA 24061</p>
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-dce56ea8f9848b22f6f1" style="width:576px;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-dce56ea8f9848b22f6f1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[37.221711,-80.42377399999999,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Litton-Reaves Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.221711,37.221711],"lng":[-80.42377399999999,-80.42377399999999]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-6e1d09d5ed1a5096b422" style="width:576px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-6e1d09d5ed1a5096b422">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[37.221711,-80.42377399999999,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Litton-Reaves Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[37.221711,37.221711],"lng":[-80.42377399999999,-80.42377399999999]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="col-md-6">
 <p>We have great facilities that allow us to advance our research.</p>
@@ -606,17 +672,40 @@ email to <strong><em>fbiase</em></strong> @
 </iframe>
 </div>
 </div>
-<p><br> <a href="#top">Back to top</a></p>
+<p><br></p>
+</div>
+<p><a href="#top" aria-label="Return to top of page">Back to top</a></p>
 <hr />
 </div>
-<div id="news" class="section level1">
-<h1>In the news</h1>
+</div>
+<div id="news" class="section level1 news-section">
+<h1 class="news-section">In the news</h1>
+<div role="main" aria-label="Laboratory News and Media">
 <p><a
+href="https://news.vt.edu/videos/k/2024/02/1_b4tcc0hg.html">Researching
+the genes that affect cell development</a><br> Virginia Tech news
+highlights our work on studying early stages of embryo development using
+CRISPR-Cas technology. Published on February 20, 2024 <br></p>
+<div class="row" style="display: flex; align-items: center;">
+<div class="col-md-6">
+<p style="text-align:center;">
+<img src="download.jpeg" alt="image from VT news" width="400" height="auto" loading="lazy" decoding="async" />
+</p>
+</div>
+<div class="col-md-6"
+style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-left: 0px; text-align: center;">
+<p>Dr. Fernando Biase and his student are conducting CRISPR-cas gene
+editing research in cattle embryos to better understand factors that
+affect development. Students in his lab gain hand-on research
+experience. <br> Feb 20, 2024</p>
+</div>
+</div>
+<p><br> <a
 href="https://www.asas.org/taking-stock/blog-post/taking-stock/2021/07/18/contemporary-and-emerging-issues-symposium-i">Contemporary
 and Emerging Issues Symposium I</a> <br> from ASAS Taking Stock blog
 post, Published on July 18, 2021 <br></p>
 <p>“Dr. Fernando Biase spoke about “Grand Challenges within Breeding and
-Genetics”” <br></p>
+Genetics” <br></p>
 <p><a
 href="https://vtnews.vt.edu/articles/2020/08/predicting-cattle-infertility.html">Predicting
 cattle infertility through machine-learning</a> <br> by Max Esterhuizen,
@@ -630,10 +719,12 @@ be identified in a calf.” <br></p>
 href="https://ocm.auburn.edu/newsroom/news_articles/2019/07/101355-improving-cattle-fertility.php">Auburn
 University researcher working to improve fertility in cattle</a> <br> by
 Paul Hollis, Published on July 10, 2019</p>
-<p><br> <a href="#top">Back to top</a></p>
+<p><br></p>
+</div>
+<p><a href="#top" aria-label="Return to top of page">Back to top</a></p>
 </div>
 
-<p>Copyright &copy; 2023 Fernando Biase All rights reserved.</p>
+<p>Copyright &copy; 2025 Fernando Biase All rights reserved.</p>
 
 
 
